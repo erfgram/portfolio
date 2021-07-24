@@ -21,15 +21,6 @@ div.content {
         max-width: 150px;
     }
 
-    .loading {
-        margin: auto;
-
-        svg {
-            max-width: 160px;
-            max-height: 160px;
-        }
-    }
-
     h3.working {
         margin-top: 32px;
         font-family: gmedium;
@@ -38,7 +29,7 @@ div.content {
     }
 
     h4.back {
-        margin-top: 15px;
+        margin-top: 16px;
         font-family: roboto;
         font-size: 18px;
         color: #5A5A5A;
@@ -52,11 +43,113 @@ div.content {
             font-size: 16px;
             font-family: roboto;
             color: #16B8F3;
+            transition: all 0.5s ease;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: #1387b1;
         }
 
         span {
             margin-left: 10px;
             margin-right: 10px;
+        }
+    }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+
+    div.content {
+        margin: 22vh auto;
+        width: 90%;
+        text-align: center;
+
+        img {
+            max-width: 150px;
+        }
+
+        h3.working {
+            font-size: 24px;
+        }
+
+        div.socials {
+            margin-top: 32px;
+
+            span {
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+
+    div.content {
+        margin: 25vh auto;
+        width: 90%;
+        text-align: center;
+
+        img {
+            max-width: 150px;
+        }
+
+        h3.working {
+            font-size: 24px;
+        }
+
+        div.socials {
+            margin-top: 32px;
+
+            span {
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+
+    div.content {
+        margin: 30vh auto;
+        width: 50%;
+        text-align: center;
+
+        img {
+            max-width: 150px;
+        }
+
+        h3.working {
+            margin-top: 32px;
+            font-family: gmedium;
+            font-size: 32px;
+            color: #B4B4B4;
+        }
+
+        h4.back {
+            margin-top: 16px;
+            font-family: roboto;
+            font-size: 18px;
+            color: #5A5A5A;
+        }
+
+        div.socials {
+            margin-top: 42px;
+            color: #16B8F3;
+
+            a {
+                font-size: 16px;
+                font-family: roboto;
+                color: #16B8F3;
+            }
+
+            span {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
         }
     }
 }
