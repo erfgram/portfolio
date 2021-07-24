@@ -17,6 +17,10 @@ div.content {
     width: 50%;
     text-align: center;
 
+    img {
+        max-width: 150px;
+    }
+
     .loading {
         margin: auto;
 
@@ -27,16 +31,32 @@ div.content {
     }
 
     h3.working {
-        margin-top: 20px;
+        margin-top: 32px;
         font-family: gmedium;
-        font-size: 35px;
+        font-size: 32px;
         color: #B4B4B4;
     }
 
     h4.back {
         margin-top: 15px;
-        font-family: gregular;
+        font-family: roboto;
         font-size: 18px;
         color: #5A5A5A;
+    }
+
+    div.socials {
+        margin-top: 42px;
+        color: #16B8F3;
+
+        a {
+            font-size: 16px;
+            font-family: roboto;
+            color: #16B8F3;
+        }
+
+        span {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
     }
 }
