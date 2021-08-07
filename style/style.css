@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: "roboto";
-  src: url(/style/fonts/Roboto-Regular.TTF);
+  src: url(/style/fonts/Roboto-Regular.ttf);
 }
 
 * {
