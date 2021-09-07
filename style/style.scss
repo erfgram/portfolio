@@ -7,8 +7,18 @@
     color: $grey;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     cursor: none;
+
+    .scroll-up {
+        background-color: red;
+        position: fixed;
+        bottom: 20px;
+    }
 
     #cursor {
         transform: translateX(-0.3rem);
@@ -21,6 +31,7 @@ body {
         text-align: center;
         vertical-align: middle;
         transition: all 0.1s ease;
+        z-index: 1;
 
         span {
             display: none;
@@ -163,6 +174,7 @@ section.text {
 // Section Text
 
 section.works {
+    position: relative;
     margin-top: 64px;
 
     div.work {
@@ -176,6 +188,7 @@ section.works {
     }
 
     div.double {
+        position: relative;
         display: flex;
 
         :not(:first-child) {
@@ -183,27 +196,87 @@ section.works {
         }
 
         div.medium {
+            aspect-ratio: auto 4 / 3;
+            width: 536px;
 
-            img {
-                min-width: 536px;
-                max-width: 536px;
+
+            a {
+                img.dribbble-video {
+                    min-width: 536px;
+                    max-width: 536px;
+                    display: none;
+                    visibility: hidden;
+                    margin-left: 0px;
+
+                }
+
+                img.dribbble-shot {
+                    min-width: 536px;
+                    max-width: 536px;
+                    margin-left: 0px;
+                    display: block;
+                    visibility: visible;
+                }
+            }
+
+            a:hover {
+                img.dribbble-video {
+                    display: block;
+                    visibility: visible;
+                }
+
+                img.dribbble-shot {
+                    display: none;
+                    visibility: hidden;
+                }
             }
         }
     }
 
     div.triple {
+        position: relative;
         display: flex;
 
         :not(:first-child) {
             margin-left: 16px;
         }
 
-        a {
-            img {
-                min-width: 352px;
-                max-width: 352px;
+        div.small {
+            aspect-ratio: auto 4 / 3;
+            width: 352px;
+
+            a {
+                img.dribbble-video {
+                    min-width: 352px;
+                    max-width: 352px;
+                    display: none;
+                    visibility: hidden;
+                    margin-left: 0px;
+                }
+
+                img.dribbble-shot {
+                    min-width: 352px;
+                    max-width: 352px;
+                    margin-left: 0px;
+                    display: block;
+                    visibility: visible;
+                }
             }
+
+            a:hover {
+                img.dribbble-video {
+                    display: block;
+                    visibility: visible;
+                }
+
+                img.dribbble-shot {
+                    display: none;
+                    visibility: hidden;
+                }
+            }
+
         }
+
     }
 }
 

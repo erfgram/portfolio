@@ -19,6 +19,10 @@
   color: #828282;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   cursor: none;
   background-color: #232323;
@@ -27,6 +31,12 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+
+body .scroll-up {
+  background-color: red;
+  position: fixed;
+  bottom: 20px;
 }
 
 body #cursor {
@@ -42,6 +52,7 @@ body #cursor {
   vertical-align: middle;
   -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
+  z-index: 1;
 }
 
 body #cursor span {
@@ -182,6 +193,7 @@ section.text div.social a.email:hover span {
 }
 
 section.works {
+  position: relative;
   margin-top: 64px;
 }
 
@@ -196,6 +208,7 @@ section.works div.rows:not(:first-child) {
 }
 
 section.works div.double {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -205,12 +218,39 @@ section.works div.double :not(:first-child) {
   margin-left: 16px;
 }
 
-section.works div.double div.medium img {
+section.works div.double div.medium {
+  aspect-ratio: auto 4 / 3;
+  width: 536px;
+}
+
+section.works div.double div.medium a img.dribbble-video {
   min-width: 536px;
   max-width: 536px;
+  display: none;
+  visibility: hidden;
+  margin-left: 0px;
+}
+
+section.works div.double div.medium a img.dribbble-shot {
+  min-width: 536px;
+  max-width: 536px;
+  margin-left: 0px;
+  display: block;
+  visibility: visible;
+}
+
+section.works div.double div.medium a:hover img.dribbble-video {
+  display: block;
+  visibility: visible;
+}
+
+section.works div.double div.medium a:hover img.dribbble-shot {
+  display: none;
+  visibility: hidden;
 }
 
 section.works div.triple {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -220,9 +260,35 @@ section.works div.triple :not(:first-child) {
   margin-left: 16px;
 }
 
-section.works div.triple a img {
+section.works div.triple div.small {
+  aspect-ratio: auto 4 / 3;
+  width: 352px;
+}
+
+section.works div.triple div.small a img.dribbble-video {
   min-width: 352px;
   max-width: 352px;
+  display: none;
+  visibility: hidden;
+  margin-left: 0px;
+}
+
+section.works div.triple div.small a img.dribbble-shot {
+  min-width: 352px;
+  max-width: 352px;
+  margin-left: 0px;
+  display: block;
+  visibility: visible;
+}
+
+section.works div.triple div.small a:hover img.dribbble-video {
+  display: block;
+  visibility: visible;
+}
+
+section.works div.triple div.small a:hover img.dribbble-shot {
+  display: none;
+  visibility: hidden;
 }
 
 footer {
